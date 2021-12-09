@@ -3,6 +3,9 @@
     <div>
       {{ message }}
     </div>
+    <div>
+      {{ message }}
+    </div>
   </div>
 </template>
 

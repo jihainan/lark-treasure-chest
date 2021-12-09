@@ -40,6 +40,6 @@
     "vue-template-compiler": "^2.6.13"
   },
   "lint-staged": {
-    "*.js": "eslint --cache --fix"
+    "*.{ts,vue}": "eslint --cache --fix"
   }
 }
