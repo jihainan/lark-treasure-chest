@@ -1,0 +1,45 @@
+{
+  "name": "lark-treasure-chest",
+  "version": "1.0.0",
+  "private": true,
+  "author": "jihainan <ji_hai_nan@163.com>",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint:eslint": "eslint",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "js-cookie": "^2.2.1",
+    "vue": "^2.6.14",
+    "vuex": "^3.6.2",
+    "vuex-module-decorators": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/js-cookie": "^2.2.6",
+    "@typescript-eslint/eslint-plugin": "^5.6.0",
+    "@typescript-eslint/parser": "^5.6.0",
+    "@vitejs/plugin-legacy": "^1.6.4",
+    "eslint": "^8.4.1",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^8.2.0",
+    "husky": ">=6",
+    "lint-staged": ">=10",
+    "prettier": "2.5.1",
+    "sass": "^1.34.1",
+    "tslib": "^2.2.0",
+    "typescript": "^4.2.4",
+    "vite": "^2.2.4",
+    "vite-plugin-html": "^2.1.1",
+    "vite-plugin-vue2": "^1.9.0",
+    "vue-class-component": "^7.2.6",
+    "vue-property-decorator": "^9.1.2",
+    "vue-template-compiler": "^2.6.13"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix"
+  }
+}
