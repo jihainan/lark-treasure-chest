@@ -1,0 +1,9 @@
+{
+  "extends": ["stylelint-config-standard-scss", "stylelint-config-html", "stylelint-config-idiomatic-order",
+  "stylelint-config-prettier"],
+  "rules": {
+    "block-closing-brace-empty-line-before": ["never", { "except": ["after-closing-brace"] }]
+  }
+}
+
+

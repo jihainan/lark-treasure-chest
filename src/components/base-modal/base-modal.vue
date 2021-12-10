@@ -3,6 +3,7 @@
     <div>
       {{ message }}
     </div>
+
     <div>
       {{ message }}
     </div>
@@ -21,6 +22,8 @@ export default class BaseModal extends Vue {
 
 <style lang="scss" scoped>
 .base-modal-container {
+  width: 100%;
+  height: 100%;
   background-color: red;
 }
 </style>
