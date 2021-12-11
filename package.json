@@ -4,9 +4,9 @@
   "private": true,
   "author": "jihainan <ji_hai_nan@163.com>",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint:script": "eslint --ext .ts,vue,json --ignore-path .gitignore .",
+    "dev": "vite --config config/vite.config.ts",
+    "build": "vite build --config config/vite.config.ts",
+    "lint:script": "prettier -w -u *.{json,html} && eslint --ext .ts,vue --ignore-path .gitignore .",
     "lint:style": "stylelint src/**/*.{css,scss,vue} --ignore-path .gitignore",
     "prepare": "husky install"
   },
@@ -48,6 +48,7 @@
   },
   "lint-staged": {
     "*.{ts,vue,json}": "eslint --cache --fix",
-    "*.{css,scss,vue}": "stylelint --fix"
+    "*.{css,scss,vue}": "stylelint --fix",
+    "*.{json,html}": "prettier -w -u"
   }
 }
