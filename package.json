@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint:script": "eslint --ext .ts,vue --ignore-path .gitignore .",
+    "lint:script": "eslint --ext .ts,vue,json --ignore-path .gitignore .",
     "lint:style": "stylelint src/**/*.{css,scss,vue} --ignore-path .gitignore",
     "prepare": "husky install"
   },
@@ -29,14 +29,14 @@
     "eslint-plugin-vue": "^8.2.0",
     "husky": ">=6",
     "lint-staged": ">=10",
+    "postcss": "^8.3.3",
     "postcss-html": "^1.3.0",
     "prettier": "2.5.1",
     "sass": "^1.34.1",
     "stylelint": "^14.1.0",
     "stylelint-config-html": "^1.0.0",
-    "stylelint-config-idiomatic-order": "^8.1.0",
     "stylelint-config-prettier": "^9.0.3",
-    "stylelint-config-standard-scss": "^3.0.0",
+    "stylelint-config-sass-guidelines": "^9.0.1",
     "tslib": "^2.2.0",
     "typescript": "^4.2.4",
     "vite": "^2.2.4",
@@ -47,7 +47,7 @@
     "vue-template-compiler": "^2.6.13"
   },
   "lint-staged": {
-    "*.{ts,vue}": "eslint --cache --fix",
+    "*.{ts,vue,json}": "eslint --cache --fix",
     "*.{css,scss,vue}": "stylelint --fix"
   }
 }

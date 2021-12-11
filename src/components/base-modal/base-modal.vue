@@ -22,8 +22,8 @@ export default class BaseModal extends Vue {
 
 <style lang="scss" scoped>
 .base-modal-container {
-  width: 100%;
+  background-color: #f00;
   height: 100%;
-  background-color: red;
+  width: 100%;
 }
 </style>
