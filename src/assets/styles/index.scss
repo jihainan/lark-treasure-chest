@@ -1,15 +1,15 @@
 /* Global scss */
 html,
 body {
-  width: 100%;
   height: 100%;
+  width: 100%;
 }
 
 body {
-  margin: 0;
   font-family: var(--font-family-element);
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  margin: 0;
 }
 
 *,
@@ -18,58 +18,11 @@ body {
   box-sizing: border-box;
 }
 
-#app {
-  height: 100%;
-}
-
-a,
-a:focus,
-a:hover {
-  color: inherit;
-  outline: none;
-  text-decoration: none;
-}
-
-div:focus {
-  outline: none;
-}
-
-.clearfix {
-  @include clearfix;
-}
-
-.flex,
-.flex-center {
-  display: flex;
-  align-items: center;
-}
-
-.flex-center {
-  justify-content: center;
-}
-
-.gap-s {
-  .el-col {
-    padding: 0 var(--gap);
-    margin-bottom: var(--gap-xl);
-  }
-}
-
-.page-router {
-  padding: var(--gap) var(--gap-l);
-}
-
-.page-title {
-  padding: var(--gap-m);
-  margin: 0;
-  color: var(--gray-dark);
-  font-size: 14px;
-}
 
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
   background-color: transparent;
+  height: 6px;
+  width: 6px;
 
   /* or add it to the track */
 }
