@@ -1,8 +1,6 @@
 <template>
   <div class="base-modal-container">
-    <div>
-      {{ message }}
-    </div>
+    <div>{{ message }}1234</div>
 
     <div>{{ message }}123</div>
   </div>
