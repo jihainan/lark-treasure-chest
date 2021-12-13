@@ -4,9 +4,7 @@
       {{ message }}
     </div>
 
-    <div>
-      {{ message }}
-    </div>
+    <div>{{ message }}123</div>
   </div>
 </template>
 
