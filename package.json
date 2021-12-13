@@ -8,6 +8,7 @@
     "build": "vite build --config config/vite.config.ts",
     "lint:script": "prettier -w -u *.{json,html} && eslint --ext .ts,vue --ignore-path .gitignore .",
     "lint:style": "stylelint src/**/*.{css,scss,vue} --ignore-path .gitignore",
+    "cmm": "cz",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -22,6 +23,8 @@
     "@typescript-eslint/eslint-plugin": "^5.6.0",
     "@typescript-eslint/parser": "^5.6.0",
     "@vitejs/plugin-legacy": "^1.6.4",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.4.1",
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^8.3.0",
