@@ -1,6 +1,10 @@
 {
   "path": "cz-conventional-changelog",
   "types": {
+    "init": {
+      "description": "初始提交",
+      "title": "Initialization"
+    },
     "feat": {
       "description": "增加新功能",
       "title": "Features"
