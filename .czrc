@@ -8,6 +8,10 @@
     "feat": {
       "description": "增加新功能",
       "title": "Features"
+    },
+    "fix": {
+      "description": "修复bug",
+      "title": "Fix"
     }
   }
 }
