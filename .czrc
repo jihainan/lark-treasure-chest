@@ -12,6 +12,50 @@
     "fix": {
       "description": "修复bug",
       "title": "Fix"
+    },
+    "ui": {
+      "description": "更新UI",
+      "title": "UI"
+    },
+    "refactor": {
+      "description": "代码重构",
+      "title": "Refactor"
+    },
+    "release": {
+      "description": "发布新版本",
+      "title": "Release"
+    },
+    "deploy": {
+      "description": "部署新版本",
+      "title": "Deploy"
+    },
+    "docs": {
+      "description": "更新文档",
+      "title": "Documents"
+    },
+    "test": {
+      "description": "增删测试",
+      "title": "Test"
+    },
+    "chore": {
+      "description": "更改配置文件",
+      "title": "Chore"
+    },
+    "style": {
+      "description": "样式修改但不影响逻辑",
+      "title": "Style"
+    },
+    "revert": {
+      "description": "版本回退",
+      "title": "Revert"
+    },
+    "add": {
+      "description": "添加依赖",
+      "title": "Add"
+    },
+    "del": {
+      "description": "删除代码/文件/文件",
+      "title": "Delete"
     }
   }
 }
