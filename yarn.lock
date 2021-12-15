@@ -3327,7 +3327,7 @@ lodash.truncate@^4.4.2:
   resolved "https://registry.npm.taobao.org/lodash.truncate/download/lodash.truncate-4.4.2.tgz"
   integrity sha1-WjUNoLERO4N+z//VgSy+WNbq4ZM=
 
-lodash@^4.17.12, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.21, lodash@^4.17.4:
+lodash@^4.17.12, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.21, lodash@^4.17.4:
   version "4.17.21"
   resolved "https://registry.nlark.com/lodash/download/lodash-4.17.21.tgz?cache=0&sync_timestamp=1622685830565&other_urls=https%3A%2F%2Fregistry.nlark.com%2Flodash%2Fdownload%2Flodash-4.17.21.tgz"
   integrity sha1-Z5WRxWTDv/quhFTPCz3zcMPWkRw=
@@ -3837,7 +3837,7 @@ postcss-safe-parser@^6.0.0:
 
 postcss-scss@^4.0.2:
   version "4.0.2"
-  resolved "https://registry.npmmirror.com/postcss-scss/download/postcss-scss-4.0.2.tgz?cache=0&sync_timestamp=1635496103823&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fpostcss-scss%2Fdownload%2Fpostcss-scss-4.0.2.tgz"
+  resolved "https://registry.npmmirror.com/postcss-scss/download/postcss-scss-4.0.2.tgz#39ddcc0ab32f155d5ab328ee91353d67a52d537b"
   integrity sha1-Od3MCrMvFV1asyjukTU9Z6UtU3s=
 
 postcss-selector-parser@^6.0.2, postcss-selector-parser@^6.0.6:
@@ -3848,17 +3848,20 @@ postcss-selector-parser@^6.0.2, postcss-selector-parser@^6.0.6:
     cssesc "^3.0.0"
     util-deprecate "^1.0.2"
 
-postcss-sorting@^7.0.1:
-  version "7.0.1"
-  resolved "https://registry.npmmirror.com/postcss-sorting/download/postcss-sorting-7.0.1.tgz"
-  integrity sha1-kjtSaEUc8tk+v4g14XplN3VwSaU=
+postcss-sorting@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.npmmirror.com/postcss-sorting/download/postcss-sorting-5.0.1.tgz#10d5d0059eea8334dacc820c0121864035bc3f11"
+  integrity sha1-ENXQBZ7qgzTazIIMASGGQDW8PxE=
+  dependencies:
+    lodash "^4.17.14"
+    postcss "^7.0.17"
 
 postcss-value-parser@^4.1.0:
   version "4.2.0"
   resolved "https://registry.npmmirror.com/postcss-value-parser/download/postcss-value-parser-4.2.0.tgz"
   integrity sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==
 
-postcss@^7.0.36:
+postcss@^7.0.17, postcss@^7.0.36:
   version "7.0.39"
   resolved "https://registry.npmmirror.com/postcss/download/postcss-7.0.39.tgz"
   integrity sha1-liQ3XZZWMOLh8sAqk1yCpZy0gwk=
@@ -4488,31 +4491,59 @@ stylelint-config-html@^1.0.0:
   resolved "https://registry.npmmirror.com/stylelint-config-html/download/stylelint-config-html-1.0.0.tgz"
   integrity sha1-FyrLmW7kyFToxnD8/3f/DZjTvsI=
 
+stylelint-config-idiomatic-order@^8.1.0:
+  version "8.1.0"
+  resolved "https://registry.npmmirror.com/stylelint-config-idiomatic-order/download/stylelint-config-idiomatic-order-8.1.0.tgz#7ca7fa92eb79369948dd4977499466c844ace21d"
+  integrity sha1-fKf6kut5NplI3Ul3SZRmyESs4h0=
+  dependencies:
+    stylelint-order "^3.1.1"
+
 stylelint-config-prettier@^9.0.3:
   version "9.0.3"
   resolved "https://registry.npmmirror.com/stylelint-config-prettier/download/stylelint-config-prettier-9.0.3.tgz"
   integrity sha1-Dczr7/NZ3MOTySKRhECLCJZNVhw=
 
-stylelint-config-sass-guidelines@^9.0.1:
-  version "9.0.1"
-  resolved "https://registry.npmmirror.com/stylelint-config-sass-guidelines/download/stylelint-config-sass-guidelines-9.0.1.tgz?cache=0&sync_timestamp=1635762966681&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fstylelint-config-sass-guidelines%2Fdownload%2Fstylelint-config-sass-guidelines-9.0.1.tgz"
-  integrity sha1-MRTOeA8ghbqepdorfZeh6F6Wj6c=
+stylelint-config-recommended-scss@^5.0.2:
+  version "5.0.2"
+  resolved "https://registry.npmmirror.com/stylelint-config-recommended-scss/download/stylelint-config-recommended-scss-5.0.2.tgz#193f483861c76a36ece24c52eb6baca4838f4a48"
+  integrity sha512-b14BSZjcwW0hqbzm9b0S/ScN2+3CO3O4vcMNOw2KGf8lfVSwJ4p5TbNEXKwKl1+0FMtgRXZj6DqVUe/7nGnuBg==
   dependencies:
     postcss-scss "^4.0.2"
-    stylelint-order "^5.0.0"
+    stylelint-config-recommended "^6.0.0"
     stylelint-scss "^4.0.0"
 
-stylelint-order@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.npmmirror.com/stylelint-order/download/stylelint-order-5.0.0.tgz"
-  integrity sha1-q9IPa4WsZAd0y+QOcNP+nG/fRAA=
+stylelint-config-recommended@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.npmmirror.com/stylelint-config-recommended/download/stylelint-config-recommended-6.0.0.tgz#fd2523a322836005ad9bf473d3e5534719c09f9d"
+  integrity sha1-/SUjoyKDYAWtm/Rz0+VTRxnAn50=
+
+stylelint-config-standard-scss@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npmmirror.com/stylelint-config-standard-scss/download/stylelint-config-standard-scss-3.0.0.tgz#dafc4fa5538d0ed833bf0a7d391e075683ffd96c"
+  integrity sha512-zt3ZbzIbllN1iCmc94e4pDxqpkzeR6CJo5DDXzltshuXr+82B8ylHyMMARNnUYrZH80B7wgY7UkKTYCFM0UUyw==
   dependencies:
-    postcss "^8.3.11"
-    postcss-sorting "^7.0.1"
+    stylelint-config-recommended-scss "^5.0.2"
+    stylelint-config-standard "^24.0.0"
+
+stylelint-config-standard@^24.0.0:
+  version "24.0.0"
+  resolved "https://registry.npmmirror.com/stylelint-config-standard/download/stylelint-config-standard-24.0.0.tgz#6823f207ab997ae0b641f9a636d007cc44d77541"
+  integrity sha512-+RtU7fbNT+VlNbdXJvnjc3USNPZRiRVp/d2DxOF/vBDDTi0kH5RX2Ny6errdtZJH3boO+bmqIYEllEmok4jiuw==
+  dependencies:
+    stylelint-config-recommended "^6.0.0"
+
+stylelint-order@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.npmmirror.com/stylelint-order/download/stylelint-order-3.1.1.tgz?cache=0&sync_timestamp=1634869735737&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fstylelint-order%2Fdownload%2Fstylelint-order-3.1.1.tgz#ba9ea6844d1482f97f31204e7c9605c7b792c294"
+  integrity sha1-up6mhE0Ugvl/MSBOfJYFx7eSwpQ=
+  dependencies:
+    lodash "^4.17.15"
+    postcss "^7.0.17"
+    postcss-sorting "^5.0.1"
 
 stylelint-scss@^4.0.0:
   version "4.0.1"
-  resolved "https://registry.npmmirror.com/stylelint-scss/download/stylelint-scss-4.0.1.tgz"
+  resolved "https://registry.npmmirror.com/stylelint-scss/download/stylelint-scss-4.0.1.tgz#da03f687c5bf8b91ea40d389ad29e07c328582b1"
   integrity sha512-Ea+KY7ZFsDhU6Ne9r84y7NvFSNA843w352MSdQeDmklar0pDbeQj9flKrVAuDIlK0pDDdhFtgBl/N0FrtWHq0g==
   dependencies:
     lodash "^4.17.21"
