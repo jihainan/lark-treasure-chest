@@ -12,6 +12,9 @@
   },
   "plugins": ["vue", "@typescript-eslint", "prettier"],
   "rules": {
-    "new-cap": ["error", { "capIsNewExceptionPattern": "Component|Module" }]
+    "new-cap": [
+      "error",
+      { "capIsNewExceptionPattern": "Component|Module|Prop|Watch" }
+    ]
   }
 }
