@@ -2,7 +2,7 @@
   <div class="base-modal-container">
     <!-- 遮罩层 -->
     <transition name="fade-modal" appear>
-      <div v-if="computedVisible" class="base-modal-mask" />
+      <div v-if="syncedVisible" class="base-modal-mask" />
     </transition>
 
     <!-- 主内容区域 -->
@@ -12,7 +12,7 @@
       @after-enter="handleOpen"
       @after-leave="handleClose"
     >
-      <div v-if="computedVisible" class="base-modal-wrapper">
+      <div v-if="syncedVisible" class="base-modal-wrapper">
         <div class="base-modal">
           <!-- 主内容区域默认插槽 -->
           <div class="base-modal-body">
@@ -28,14 +28,14 @@
 
 <script lang="ts">
 import { CSSProperties } from "@/assets/styles";
-import { Component, Prop, Vue } from "vue-property-decorator";
+import { Component, Prop, PropSync, Vue } from "vue-property-decorator";
 
 @Component({ name: "BaseModal" })
 /** 基础弹窗组件 */
 export default class BaseModal extends Vue {
   /** 弹窗是否可见 */
-  @Prop({ default: undefined })
-  visible!: boolean;
+  @PropSync("visible", { default: undefined })
+  syncedVisible!: boolean;
   /** 弹窗默认是否可见（非受控） */
   @Prop({ default: true })
   defaultVisible!: boolean;
@@ -61,37 +61,18 @@ export default class BaseModal extends Vue {
   @Prop({ default: () => ({}) })
   modalStyle!: CSSProperties;
 
-  /** 弹窗实际显示状态 */
-  private actualVisible: boolean = true;
-
-  // /**
-  //  * 弹窗显示状态变更
-  //  * @param {boolean} nv 最新状态
-  //  * @param {boolean} ov 前一个状态
-  //  */
-  // @Watch("actualVisible", { immediate: true })
-  // visibleChanged(nv: boolean, ov: boolean) {
-  //   console.log(nv, ov);
-  // }
-
-  /** 弹窗显示状态 */
-  get computedVisible() {
-    return this.visible ?? this.actualVisible;
-  }
-
   /**
    * 关闭弹窗
    */
   close() {
-    this.actualVisible = false;
-    this.$emit("update:visible", false);
+    this.syncedVisible = false;
   }
 
   /**
    * 处理弹窗打开事件
    */
   handleOpen() {
-    if (this.computedVisible) {
+    if (this.syncedVisible) {
       this.$emit("open");
     }
   }
@@ -99,7 +80,7 @@ export default class BaseModal extends Vue {
    * 处理弹窗关闭事件
    */
   handleClose() {
-    if (!this.computedVisible) {
+    if (!this.syncedVisible) {
       this.$emit("close");
     }
   }
