@@ -8,7 +8,15 @@ import proxy from "./proxy";
 export default defineConfig({
   base: "/lark/treasure/",
   plugins: [
-    createVuePlugin(),
+    createVuePlugin({
+      jsx: true,
+      jsxOptions: {
+        functional: true,
+        injectH: true,
+        vModel: true,
+        vOn: true,
+      },
+    }),
     html({
       inject: {
         data: {
