@@ -33,9 +33,12 @@ export default class TreasureChest {
    * @param {String} labelName 挂载节点标记名称
    * @param {Function} onclose 处理关闭事件的函数
    * @param {Function} onopen 处理打开事件的函数
+   * @return {TreasureChest}
    */
   static open(labelName?: string, onclose?: () => void, onopen?: () => void) {
-    new this(labelName, onclose, onopen).start();
+    const instance = new this(labelName, onclose, onopen);
+    instance.start();
+    return instance;
   }
 
   /**
@@ -53,7 +56,9 @@ export default class TreasureChest {
   /**
    * 停止 Treasure Chest 并移除节点
    */
-  public stop(): void {}
+  public stop(): void {
+    this._modal.$props.visible = false;
+  }
 
   /**
    * 获取 Vue Component 组件实例
@@ -82,9 +87,8 @@ export default class TreasureChest {
    */
   private _setComponentEventClose(): void {
     this._modal.$on("close", () => {
-      // 移除节点
-      document.body.removeChild(this._getMountNode());
       this._onclose();
+      this._removeMountNode();
     });
   }
   /**
@@ -100,5 +104,11 @@ export default class TreasureChest {
       mountNode = document.body.appendChild(newMountNode);
     }
     return mountNode;
+  }
+  /**
+   * 移除挂载节点
+   */
+  private _removeMountNode(): void {
+    document.body.removeChild(this._getMountNode());
   }
 }
