@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/jihainan/lark-treasure-chest/compare/v1.2.2...v1.3.0) (2021-12-20)
+
+
+### Features
+
+* **component:** 二次封装BaseModal组件 ([3d843a6](https://github.com/jihainan/lark-treasure-chest/commit/3d843a6d384260a3aeaffc7b16c6f2000586109e))
+* **component:** 更新组件逻辑 ([c666dad](https://github.com/jihainan/lark-treasure-chest/commit/c666dadfe2654e14be731e87a44afc67ef7f088d))
+* **component:** add close function ([5d529e3](https://github.com/jihainan/lark-treasure-chest/commit/5d529e33f9f8e0809cc21181fc43a72538a1c1d5))
+
 ### [1.2.2](https://github.com/jihainan/lark-treasure-chest/compare/v1.2.1...v1.2.2) (2021-12-19)
 
 ### [1.2.1](https://github.com/jihainan/lark-treasure-chest/compare/v1.2.0...v1.2.1) (2021-12-18)
