@@ -1,8 +1,9 @@
 import { defineConfig } from "vite";
 import { createVuePlugin } from "vite-plugin-vue2";
 import html from "vite-plugin-html";
-import legacy from "@vitejs/plugin-legacy";
+// import legacy from "@vitejs/plugin-legacy";
 import proxy from "./proxy";
+import build from "./build";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -24,9 +25,9 @@ export default defineConfig({
         },
       },
     }),
-    legacy({
-      targets: ["chrome >= 49"],
-    }),
+    // legacy({
+    //   targets: ["chrome >= 49"],
+    // }),
   ],
   resolve: {
     alias: {
@@ -38,7 +39,5 @@ export default defineConfig({
     cors: true,
     proxy,
   },
-  build: {
-    outDir: "dist",
-  },
+  build,
 });

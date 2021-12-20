@@ -1,7 +1,18 @@
 {
   "name": "lark-treasure-chest",
-  "version": "1.2.2",
-  "private": true,
+  "version": "1.2.3",
+  "private": false,
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/lark-treasure-chest.umd.js",
+  "module": "./dist/lark-treasure-chest.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/lark-treasure-chest.es.js",
+      "require": "./dist/lark-treasure-chest.umd.js"
+    }
+  },
   "author": "jihainan <ji_hai_nan@163.com>",
   "scripts": {
     "dev": "vite --config config/vite.config.ts",
@@ -25,6 +36,7 @@
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
     "@types/js-cookie": "^2.2.6",
+    "@types/node": "^17.0.1",
     "@typescript-eslint/eslint-plugin": "^5.6.0",
     "@typescript-eslint/parser": "^5.6.0",
     "@vitejs/plugin-legacy": "^1.6.4",
