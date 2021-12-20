@@ -46,8 +46,8 @@ export default class TreasureChest {
     this._getMountNode().appendChild(this._modal.$el);
     this._setComponentVisible();
     // 设置组件的监听事件
-    this._setComponentEvent("open");
-    this._setComponentEvent("close");
+    this._setComponentEventOpen();
+    this._setComponentEventClose();
   }
 
   /**
@@ -73,10 +73,19 @@ export default class TreasureChest {
   }
   /**
    * 设置内部组件事件处理函数
-   * @param {String} eventName 事件名称
    */
-  private _setComponentEvent(eventName: string): void {
-    this._modal.$on(eventName, this[`_on${eventName}`]);
+  private _setComponentEventOpen(): void {
+    this._modal.$on("open", this._onopen);
+  }
+  /**
+   * 设置内部组件事件处理函数
+   */
+  private _setComponentEventClose(): void {
+    this._modal.$on("close", () => {
+      // 移除节点
+      document.body.removeChild(this._getMountNode());
+      this._onclose();
+    });
   }
   /**
    * 获取挂载节点
