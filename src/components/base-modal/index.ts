@@ -1,9 +1,9 @@
-import Vue from "vue";
 import BaseModal from "./base-modal.vue";
+import TestA from "@/components/treasure-chest/test-a.vue";
 /**
- * Treasure Chest 启动类
+ * BaseModal 启动类
  */
-export default class TreasureChest {
+export default class BaseModalClass {
   /**
    * @constructor
    * @param {String} labelName 挂载节点标记名称
@@ -18,7 +18,7 @@ export default class TreasureChest {
   /** 挂载节点的标记名称 */
   private _label: string = "lark-treasure-chest";
   /** 内部组件实例 */
-  private _modal!: Vue;
+  private _modal!: BaseModal;
   /** 处理内部组件关闭事件的方法 */
   private _onclose: () => void = () => {
     console.log("closed");
@@ -33,7 +33,7 @@ export default class TreasureChest {
    * @param {String} labelName 挂载节点标记名称
    * @param {Function} onclose 处理关闭事件的函数
    * @param {Function} onopen 处理打开事件的函数
-   * @return {TreasureChest}
+   * @return {this}
    */
   static open(labelName?: string, onclose?: () => void, onopen?: () => void) {
     const instance = new this(labelName, onclose, onopen);
@@ -65,7 +65,16 @@ export default class TreasureChest {
    * @return {BaseModal}
    */
   private _getComponent(): BaseModal {
-    return new BaseModal().$mount();
+    // TODO:待测试
+    if (this._modal) {
+      return this._modal;
+    } else {
+      // return new BaseModal().$mount();
+      const a = new BaseModal().$mount();
+      // eslint-disable-next-line new-cap
+      a.$slots.default = [a.$createElement(TestA), a.$createElement(TestA)];
+      return a;
+    }
   }
   /**
    * 设置内部组件实例的 visible 属性和更新事件

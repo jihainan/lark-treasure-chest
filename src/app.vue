@@ -1,12 +1,14 @@
 <template>
   <div class="app">
     <button @click="triggerTreasureChest">触发</button>
+    <!-- <TestA /> -->
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import TreasureChest from "@/components/base-modal";
+// import TestA from "./components/treasure-chest/test-a.vue";
 
 @Component
 /** root component */
@@ -20,7 +22,7 @@ export default class App extends Vue {
     );
     setTimeout(() => {
       instance.stop();
-    }, 2000);
+    }, 20000);
   }
   /**
    * 关闭弹出框

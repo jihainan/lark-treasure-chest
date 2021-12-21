@@ -27,6 +27,7 @@
 </template>
 
 <script lang="ts">
+import "./polyfill-global-this.js";
 import { CSSProperties } from "@/assets/styles";
 import { Component, Prop, PropSync, Vue } from "vue-property-decorator";
 
