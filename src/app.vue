@@ -15,14 +15,7 @@ import TreasureChest from "@/components/base-modal";
 export default class App extends Vue {
   /** 触发消息百宝箱 */
   triggerTreasureChest() {
-    const instance = TreasureChest.open(
-      "lak1",
-      this.onModalClosed,
-      this.onModalOpened
-    );
-    setTimeout(() => {
-      instance.stop();
-    }, 20000);
+    TreasureChest.open("lak1", this.onModalClosed, this.onModalOpened);
   }
   /**
    * 关闭弹出框

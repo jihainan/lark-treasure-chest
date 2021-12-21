@@ -128,7 +128,8 @@ export default class BaseModal extends Vue {
 
   .base-modal-body {
     position: relative;
-    padding: 24px 20px;
+
+    // padding: 24px 20px;
   }
 
   .base-modal-close-btn {

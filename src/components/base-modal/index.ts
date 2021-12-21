@@ -1,5 +1,6 @@
 import BaseModal from "./base-modal.vue";
-import TestA from "@/components/treasure-chest/test-a.vue";
+// import SingleImg from "@/components/treasure-chest/modules/single-img.vue";
+import SingleVedio from "@/components/treasure-chest/modules/single-vedio.vue";
 /**
  * BaseModal 启动类
  */
@@ -65,15 +66,13 @@ export default class BaseModalClass {
    * @return {BaseModal}
    */
   private _getComponent(): BaseModal {
-    // TODO:待测试
     if (this._modal) {
       return this._modal;
     } else {
       // return new BaseModal().$mount();
-      const a = new BaseModal().$mount();
-      // eslint-disable-next-line new-cap
-      a.$slots.default = [a.$createElement(TestA), a.$createElement(TestA)];
-      return a;
+      const component = new BaseModal().$mount();
+      component.$slots.default = [component.$createElement(SingleVedio)];
+      return component;
     }
   }
   /**
