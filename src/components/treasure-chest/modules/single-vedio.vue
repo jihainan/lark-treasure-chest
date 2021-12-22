@@ -12,18 +12,8 @@
 import Vue from "vue";
 import Component from "vue-class-component";
 import { Prop } from "vue-property-decorator";
+import { SingleVedio } from "@/service/model";
 
-/**
- * props 参数类型
- */
-export interface SingleVedioProps {
-  // 视频资源地址
-  vedioSrc: string;
-  // 视频资源占位文字
-  vedioAlt: string;
-  // 视频封面图片地址
-  vedioPoster: string;
-}
 @Component
 /** single img component */
 export default class TestA extends Vue {
@@ -34,7 +24,7 @@ export default class TestA extends Vue {
       vedioPoster: "https://fakeimg.pl/500x500/282828/eae0d0/",
     }),
   })
-  info!: SingleVedioProps;
+  info!: SingleVedio;
 }
 </script>
 

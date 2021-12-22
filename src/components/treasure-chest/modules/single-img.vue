@@ -8,16 +8,8 @@
 import Vue from "vue";
 import Component from "vue-class-component";
 import { Prop } from "vue-property-decorator";
+import { SingleImg } from "@/service/model";
 
-/**
- * props 参数类型
- */
-export interface SingleImgProps {
-  // 图片资源地址
-  imgSrc: string;
-  // 图片资源占位文字
-  imgAlt: string;
-}
 @Component
 /** single img component */
 export default class TestA extends Vue {
@@ -27,7 +19,7 @@ export default class TestA extends Vue {
       imgAlt: "Happy Every Day !",
     }),
   })
-  info!: SingleImgProps;
+  info!: SingleImg;
 }
 </script>
 

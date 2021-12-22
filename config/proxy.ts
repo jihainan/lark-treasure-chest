@@ -1,9 +1,9 @@
 export default {
   // 选项写法
-  "/api": {
-    target: "http://localhost:7777",
+  "/lark/treasure/chest": {
+    target: "http://localhost:7776",
     changeOrigin: true,
-    rewrite: (path) => path.replace(/^\/api/, ""),
+    rewrite: (path) => path.replace(/^\/lark\/treasure\/chest/, "/"),
   },
   // 正则表达式写法
   "^/fallback/.*": {

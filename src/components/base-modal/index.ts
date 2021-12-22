@@ -1,6 +1,6 @@
 import BaseModal from "./base-modal.vue";
-// import SingleImg from "@/components/treasure-chest/modules/single-img.vue";
-import SingleVedio from "@/components/treasure-chest/modules/single-vedio.vue";
+import { CreateElement, VNode } from "vue";
+
 /**
  * BaseModal 启动类
  */
@@ -34,19 +34,32 @@ export default class BaseModalClass {
    * @param {String} labelName 挂载节点标记名称
    * @param {Function} onclose 处理关闭事件的函数
    * @param {Function} onopen 处理打开事件的函数
+   * @param {Function} setDefaultSlot 默认插槽组件
    * @return {this}
    */
-  static open(labelName?: string, onclose?: () => void, onopen?: () => void) {
+  static open(
+    labelName?: string,
+    onclose?: () => void,
+    onopen?: () => void,
+    setDefaultSlot?: (h: CreateElement) => VNode
+  ) {
     const instance = new this(labelName, onclose, onopen);
-    instance.start();
+    instance.start(setDefaultSlot);
     return instance;
   }
 
   /**
    * 启动 Treasure Chest
+   * @param {Function} setDefaultSlot 默认插槽组件
    */
-  public start(): void {
+  public start(setDefaultSlot?: (h: CreateElement) => VNode): void {
     this._modal = this._getComponent();
+
+    // 设置存在插槽参数的组件
+    if (setDefaultSlot) {
+      this._modal.$slots.default = [setDefaultSlot(this._modal.$createElement)];
+    }
+
     this._getMountNode().appendChild(this._modal.$el);
     this._setComponentVisible();
     // 设置组件的监听事件
@@ -69,10 +82,10 @@ export default class BaseModalClass {
     if (this._modal) {
       return this._modal;
     } else {
-      // return new BaseModal().$mount();
-      const component = new BaseModal().$mount();
-      component.$slots.default = [component.$createElement(SingleVedio)];
-      return component;
+      return new BaseModal().$mount();
+      // const component = new BaseModal().$mount();
+      // component.$slots.default = [component.$createElement(SingleVedio)];
+      // return component;
     }
   }
   /**

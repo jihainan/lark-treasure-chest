@@ -1,21 +1,20 @@
 <template>
   <div class="app">
-    <button @click="triggerTreasureChest">触发</button>
-    <!-- <TestA /> -->
+    <button @click="testTreasureChest">触发</button>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import TreasureChest from "@/components/base-modal";
-// import TestA from "./components/treasure-chest/test-a.vue";
+import BaseModalClass from "@/components/base-modal";
+import TreasureChest from "./components/treasure-chest";
 
 @Component
 /** root component */
 export default class App extends Vue {
   /** 触发消息百宝箱 */
   triggerTreasureChest() {
-    TreasureChest.open("lak1", this.onModalClosed, this.onModalOpened);
+    BaseModalClass.open("lak1", this.onModalClosed, this.onModalOpened);
   }
   /**
    * 关闭弹出框
@@ -26,6 +25,12 @@ export default class App extends Vue {
   /** */
   onModalOpened() {
     console.log("打开了");
+  }
+  /**
+   * 测试 TreasureChest 启动类
+   */
+  testTreasureChest() {
+    new TreasureChest("/api/v1/message/").startUp();
   }
 }
 </script>
