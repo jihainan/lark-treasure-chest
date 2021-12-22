@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/jihainan/lark-treasure-chest/compare/v1.3.0...v1.4.0) (2021-12-22)
+
+
+### Features
+
+* 为组件增加完整数据链路 ([6a829bb](https://github.com/jihainan/lark-treasure-chest/commit/6a829bb689cef23b9b292d211817d9194fbbc3b7))
+* **component:** 动态渲染子组件 ([c28b6e7](https://github.com/jihainan/lark-treasure-chest/commit/c28b6e788e0705938e10b0a4a605b2b970695d51))
+
 ## [1.3.0](https://github.com/jihainan/lark-treasure-chest/compare/v1.2.2...v1.3.0) (2021-12-20)
 
 
