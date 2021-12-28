@@ -1,6 +1,6 @@
 {
   "name": "lark-treasure-chest",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "private": false,
   "files": [
     "dist"
