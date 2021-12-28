@@ -4,7 +4,7 @@ import { ContentTypeEnum, ContentTypes } from "@/service/model";
 import { CreateElement, VNode } from "vue";
 // 导入所有组件
 import SingleImg from "./modules/single-img.vue";
-import SingleVedio from "./modules/single-vedio.vue";
+import SingleVideo from "./modules/single-video.vue";
 import SingleCase from "./modules/single-case.vue";
 import CaseListVertical from "./modules/case-list-vertical.vue";
 import CaseListHorizontal from "./modules/case-list-horizontal.vue";
@@ -14,7 +14,7 @@ import CollectInfo from "./modules/collect-info.vue";
 // 内容组件map
 const componentMap = {
   SingleImg,
-  SingleVedio,
+  SingleVideo,
   SingleCase,
   CaseListVertical,
   CaseListHorizontal,
@@ -91,7 +91,8 @@ export default class TreasureChest extends BaseModalClass {
       //     payload: {
       //       content: {
       //         id: "K3FH2371",
-      //         imgSrc: "https://fakeimg.pl/350x200/ff0000,128/000,255",
+      //         imgSrc:
+      //           "http://10.11.24.129:8080/group1/M00/00/06/CgsYh2HJWLuAMJoqAHZi9qHTdP4163.jpg_res_h_?h=800&q=100",
       //         imgAlt: "测试图片",
       //       },
       //       type: 1,

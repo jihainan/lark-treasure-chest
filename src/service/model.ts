@@ -40,17 +40,17 @@ export interface SingleImg {
   // 图片资源占位文字
   imgAlt: string;
 }
-export interface SingleVedio {
+export interface SingleVideo {
   id?: string;
   // 视频资源地址
-  vedioSrc: string;
+  videoSrc: string;
   // 视频资源占位文字
-  vedioAlt: string;
+  videoAlt: string;
   // 视频封面图片地址
-  vedioPoster: string;
+  videoPoster: string;
 }
 
 /** 应用级别的数据类型 */
 export type DataResponse<T> = BaseResponse<DataPayload<T>>;
-export type ContentTypes = SingleImg | SingleVedio;
+export type ContentTypes = SingleImg | SingleVideo;
 export type InfoResponse = DataResponse<ContentTypes>;

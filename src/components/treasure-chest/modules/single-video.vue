@@ -1,9 +1,9 @@
 <template>
-  <div class="single-vedio-container">
+  <div class="single-video-container">
     <!-- <img :src="info.imgSrc" :alt="info.imgAlt" draggable="false" /> -->
-    <video autoplay loop :poster="info.vedioPoster" width="500">
-      <source :src="info.vedioSrc" type="video/mp4" />
-      <p>{{ info.vedioAlt }}</p>
+    <video autoplay loop :poster="info.videoPoster" width="500">
+      <source :src="info.videoSrc" type="video/mp4" />
+      <p>{{ info.videoAlt }}</p>
     </video>
   </div>
 </template>
@@ -12,24 +12,24 @@
 import Vue from "vue";
 import Component from "vue-class-component";
 import { Prop } from "vue-property-decorator";
-import { SingleVedio } from "@/service/model";
+import { SingleVideo } from "@/service/model";
 
 @Component
 /** single img component */
 export default class TestA extends Vue {
   @Prop({
     default: () => ({
-      vedioSrc: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4",
+      videoSrc: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4",
       imgAlt: "Happy Every Day !",
-      vedioPoster: "https://fakeimg.pl/500x500/282828/eae0d0/",
+      videoPoster: "https://fakeimg.pl/500x500/282828/eae0d0/",
     }),
   })
-  info!: SingleVedio;
+  info!: SingleVideo;
 }
 </script>
 
 <style lang="scss" scoped>
-.single-vedio-container {
+.single-video-container {
   width: 100%;
   border-radius: 4px;
 
