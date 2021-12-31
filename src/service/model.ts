@@ -11,7 +11,7 @@ export enum ContentTypeEnum {
   /** 仅包含一张图片 */
   SingleImg = 1,
   /** 仅包含一个视频 */
-  SingleVedio = 2,
+  SingleVideo = 2,
   /** 包含标题、标题和说明文字 */
   SingleCase = 3,
   /** 包含标题和列表[动画 + 说明文字] 横版 */
@@ -29,12 +29,12 @@ export type BaseResponse<T> = AxiosPromise<{
   payload: T;
 }>;
 export interface DataPayload<T> {
+  id?: string;
   type: ContentTypeEnum;
   content: T;
 }
 
 export interface SingleImg {
-  id?: string;
   // 图片资源地址
   imgSrc: string;
   // 图片资源占位文字

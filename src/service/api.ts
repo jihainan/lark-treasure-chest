@@ -3,27 +3,31 @@ import { BaseResponse, InfoResponse } from "./model";
 
 /**
  * 获取资源
- * @param {String} resourceUrl  资源地址
+ * @param {String} userId  资源地址
  * @return {Promise<object>}
  */
-export const getInfo = (resourceUrl: string): InfoResponse =>
+export const getInfo = (userId: string): InfoResponse =>
   request({
-    url: resourceUrl,
-    method: "get",
+    url: "/api/v1/message/query",
+    method: "post",
+    data: { userId },
   });
 
 /**
  * 将资源标记为已读
- * @param {String} infoId 数据ID
- * @param {String} resourceUrl 资源地址
+ * @param {String} messageId 消息ID
+ * @param {String} userId 用户ID
  * @return {Promise<object>}
  */
 export const markAsRead = (
-  infoId: string,
-  resourceUrl: string
+  messageId: string,
+  userId: string
 ): BaseResponse<boolean> =>
   request({
-    url: resourceUrl,
-    method: "put",
-    data: { infoId },
+    url: "api/v1/message/mark",
+    method: "post",
+    data: {
+      messageId,
+      userId,
+    },
   });

@@ -29,13 +29,14 @@ const componentMap = {
 export default class TreasureChest extends BaseModalClass {
   /**
    * @constructor
-   * @param {String} resourceUrl 请求后端资源的服务地址
+   * @param {String} userId 系统用户唯一标识
    * @param {String} labelName 挂载节点标记名称
    * @param {Function} onclose 处理关闭事件的函数
    * @param {Function} onopen 处理打开事件的函数
    */
   constructor(
-    resourceUrl: string,
+    // resourceUrl: string,
+    userId: string,
     labelName?: string,
     onclose?: () => void,
     onopen?: () => void
@@ -46,14 +47,16 @@ export default class TreasureChest extends BaseModalClass {
       this._markAsRead();
     };
     super(labelName, oncloseOverwrite, onopen);
-    this._resourceUrl = resourceUrl;
+    this._userId = userId;
   }
-  /** 请求后端数据的地址 */
-  private _resourceUrl: string;
+  /** 用户ID */
+  private _userId: string;
   /** 消息内容 */
   private _info: ContentTypes | undefined;
   /** 消息内容的类型 */
   private _infoType: ContentTypeEnum | undefined;
+  /** 消息ID */
+  private _infoId: string | undefined;
   /**
    * 启动方法
    */
@@ -85,7 +88,7 @@ export default class TreasureChest extends BaseModalClass {
    */
   private async _requestInfo(): Promise<boolean> {
     try {
-      const res = await getInfo(this._resourceUrl);
+      const res = await getInfo(this._userId);
       // const res = {
       //   data: {
       //     payload: {
@@ -101,6 +104,7 @@ export default class TreasureChest extends BaseModalClass {
       // };
       this._info = res.data.payload.content;
       this._infoType = res.data.payload.type;
+      this._infoId = res.data.payload.id;
       return true;
     } catch (error) {
       console.error(error);
@@ -111,8 +115,8 @@ export default class TreasureChest extends BaseModalClass {
    * 将记录标记为已读
    */
   private _markAsRead(): void {
-    if (this._info?.id) {
-      markAsRead(this._info.id, this._resourceUrl);
+    if (this._infoId) {
+      markAsRead(this._infoId, this._userId);
     }
   }
 }

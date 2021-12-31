@@ -30,7 +30,7 @@ export default class App extends Vue {
    * 测试 TreasureChest 启动类
    */
   testTreasureChest() {
-    new TreasureChest("/api/v1/message/").startUp();
+    new TreasureChest("7777777").startUp();
   }
 }
 </script>
