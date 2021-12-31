@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/jihainan/lark-treasure-chest/compare/v1.4.3...v2.0.0) (2021-12-31)
+
+
+### ⚠ BREAKING CHANGES
+
+* 更新构造函数传参数
+
+### Features
+
+* 完成数据接口调试 ([6e20ef6](https://github.com/jihainan/lark-treasure-chest/commit/6e20ef69a1695984da95a5f7008e998253995376))
+
 ### [1.4.3](https://github.com/jihainan/lark-treasure-chest/compare/v1.4.2...v1.4.3) (2021-12-28)
 
 ### [1.4.2](https://github.com/jihainan/lark-treasure-chest/compare/v1.4.0...v1.4.2) (2021-12-27)
