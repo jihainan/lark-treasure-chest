@@ -118,9 +118,7 @@ export default class BaseModal extends Vue {
 .base-modal {
   position: relative;
   top: 100px;
-  width: 500px;
   margin: 0 auto;
-  background-color: #fff;
   border-radius: 4px;
   line-height: 1.5715;
   text-align: left;
