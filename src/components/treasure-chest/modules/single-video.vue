@@ -1,5 +1,5 @@
 <template>
-  <div class="single-video-container">
+  <div class="treasure-chest-module single-video-container">
     <!-- <img :src="info.imgSrc" :alt="info.imgAlt" draggable="false" /> -->
     <video autoplay loop :poster="info.videoPoster" width="500">
       <source :src="info.videoSrc" type="video/mp4" />

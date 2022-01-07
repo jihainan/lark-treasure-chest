@@ -1,5 +1,5 @@
 <template>
-  <div class="single-img-container">
+  <div class="treasure-chest-module single-img-container">
     <img :src="info.imgSrc" :alt="info.imgAlt" draggable="false" />
   </div>
 </template>
