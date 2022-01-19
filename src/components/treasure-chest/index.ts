@@ -1,8 +1,5 @@
 import BaseModalClass from "@/components/base-modal";
-import {
-  // getInfo,
-  markAsRead,
-} from "@/service/api";
+import { getInfo, markAsRead } from "@/service/api";
 import { ContentTypeEnum, ContentTypes } from "@/service/model";
 import { CreateElement, VNode } from "vue";
 // 导入所有组件
@@ -91,75 +88,75 @@ export default class TreasureChest extends BaseModalClass {
    */
   private async _requestInfo(): Promise<boolean> {
     try {
-      // const res = await getInfo(this._userId);
-      const res = {
-        data: {
-          payload: {
-            content: {
-              // single-img
-              // id: "K3FH2371",
-              // imgSrc:
-              //   "http://10.11.24.129:8080/group1/M00/00/06/CgsYh2HJWLuAMJoqAHZi9qHTdP4163.jpg_res_h_?h=800&q=100",
-              // imgAlt: "测试图片",
+      const res = await getInfo(this._userId);
+      // const res = {
+      //   data: {
+      //     payload: {
+      //       content: {
+      //         // single-img
+      //         id: "K3FH2371",
+      //         imgSrc:
+      //           "http://10.11.24.129:8080/group1/M00/00/06/CgsYh2HJWLuAMJoqAHZi9qHTdP4163.jpg_res_h_?h=460&q=0",
+      //         imgAlt: "测试图片",
 
-              // single-case
-              // id: "K3FH2371",
-              // caseTitle: "【新功能】接收任务",
-              // caseBgSrc:
-              //   "http://localhost:8080/group1/M00/00/07/CgsYh2HWgg-AHSAKAAEo5dXqTG0872.jpg_res_h_?h=502&q=301",
-              // caseAlt: "测试图片",
-              // caseDescribe: "功能更新",
+      //         // single-case
+      //         // id: "K3FH2371",
+      //         // caseTitle: "【新功能】接收任务",
+      //         // caseBgSrc:
+      //         //   "http://localhost:8080/group1/M00/00/07/CgsYh2HWgg-AHSAKAAEo5dXqTG0872.jpg_res_h_?h=502&q=301",
+      //         // caseAlt: "测试图片",
+      //         // caseDescribe: "功能更新",
 
-              caseList: [
-                {
-                  id: "0",
-                  caseTitle: "解释文字0",
-                  caseImgSrc:
-                    "http://localhost:8080/group1/M00/00/07/CgsYh2HWg2mAEwmOAABtXH57SyA634.jpg_res_h_?h=369&q=277",
-                  caseImgAlt: "测试图片0",
-                  caseDescribe: "文字描述0",
-                },
-                {
-                  id: "1",
-                  caseTitle: "解释文字1",
-                  caseImgSrc:
-                    "http://localhost:8080/group1/M00/00/07/CgsYh2HWg2mAEwmOAABtXH57SyA634.jpg_res_h_?h=369&q=277",
-                  caseImgAlt: "测试图片1",
-                  caseDescribe: "文字描述1",
-                },
-                {
-                  id: "2",
-                  caseTitle: "解释文字2",
-                  caseImgSrc:
-                    "http://localhost:8080/group1/M00/00/07/CgsYh2HWg2mAEwmOAABtXH57SyA634.jpg_res_h_?h=369&q=277",
-                  caseImgAlt: "测试图片2",
-                  caseDescribe: "文字描述2",
-                },
-                {
-                  id: "3",
-                  caseTitle: "解释文字3",
-                  caseImgSrc:
-                    "http://localhost:8080/group1/M00/00/07/CgsYh2HWg2mAEwmOAABtXH57SyA634.jpg_res_h_?h=369&q=277",
-                  caseImgAlt: "测试图片3",
-                  caseDescribe: "文字描述3",
-                },
-                {
-                  id: "4",
-                  caseTitle: "解释文字4",
-                  caseImgSrc:
-                    "http://localhost:8080/group1/M00/00/07/CgsYh2HWg2mAEwmOAABtXH57SyA634.jpg_res_h_?h=369&q=277",
-                  caseImgAlt: "测试图片4",
-                  caseDescribe: "文字描述4",
-                },
-              ],
-            },
-            type: 5,
-          },
-        },
-      };
+      //         // caseList: [
+      //         //   {
+      //         //     id: "0",
+      //         //     caseTitle: "解释文字0",
+      //         //     caseImgSrc:
+      //         //       "http://10.11.24.129:8080/group1/M00/00/07/CgsYh2HWg2mAEwmOAABtXH57SyA634.jpg_res_h_?h=369&q=277",
+      //         //     caseImgAlt: "测试图片0",
+      //         //     caseDescribe: "文字描述0",
+      //         //   },
+      //         //   {
+      //         //     id: "1",
+      //         //     caseTitle: "解释文字1",
+      //         //     caseImgSrc:
+      //         //       "http://10.11.24.129:8080/group1/M00/00/07/CgsYh2HWg2mAEwmOAABtXH57SyA634.jpg_res_h_?h=369&q=277",
+      //         //     caseImgAlt: "测试图片1",
+      //         //     caseDescribe: "文字描述1",
+      //         //   },
+      //         //   {
+      //         //     id: "2",
+      //         //     caseTitle: "解释文字2",
+      //         //     caseImgSrc:
+      //         //       "http://10.11.24.129:8080/group1/M00/00/07/CgsYh2HWg2mAEwmOAABtXH57SyA634.jpg_res_h_?h=369&q=277",
+      //         //     caseImgAlt: "测试图片2",
+      //         //     caseDescribe: "文字描述2",
+      //         //   },
+      //         //   {
+      //         //     id: "3",
+      //         //     caseTitle: "解释文字3",
+      //         //     caseImgSrc:
+      //         //       "http://10.11.24.129:8080/group1/M00/00/07/CgsYh2HWg2mAEwmOAABtXH57SyA634.jpg_res_h_?h=369&q=277",
+      //         //     caseImgAlt: "测试图片3",
+      //         //     caseDescribe: "文字描述3",
+      //         //   },
+      //         //   {
+      //         //     id: "4",
+      //         //     caseTitle: "解释文字4",
+      //         //     caseImgSrc:
+      //         //       "http://10.11.24.129:8080/group1/M00/00/07/CgsYh2HWg2mAEwmOAABtXH57SyA634.jpg_res_h_?h=369&q=277",
+      //         //     caseImgAlt: "测试图片4",
+      //         //     caseDescribe: "文字描述4",
+      //         //   },
+      //         // ],
+      //       },
+      //       type: 1,
+      //     },
+      //   },
+      // };
       this._info = res.data.payload.content;
       this._infoType = res.data.payload.type;
-      this._infoId = res.data.payload.content.id;
+      this._infoId = res.data.payload.id;
       return true;
     } catch (error) {
       console.error(error);

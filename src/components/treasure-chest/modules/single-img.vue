@@ -1,31 +1,32 @@
 <template>
   <div class="treasure-chest-module single-img-container">
-    <img :src="info.imgSrc" :alt="info.imgAlt" draggable="false" />
+    <img :src="infoInner.imgSrc" :alt="infoInner.imgAlt" draggable="false" />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
 import Component from "vue-class-component";
-import { Prop } from "vue-property-decorator";
+import { PropSync } from "vue-property-decorator";
 import { SingleImg } from "@/service/model";
 
 @Component
 /** single img component */
 export default class TestA extends Vue {
-  @Prop({
+  @PropSync("info", {
     default: () => ({
       imgSrc: "https://fakeimg.pl/300x1600/ff0000?text=World&font=lobster",
       imgAlt: "Happy Every Day !",
     }),
   })
-  info!: SingleImg;
+  infoInner!: SingleImg;
 }
 </script>
 
 <style lang="scss" scoped>
 .single-img-container {
-  width: 100%;
+  width: 460px;
+  height: 520px;
   border-radius: 4px;
 
   // 提取为公共属性

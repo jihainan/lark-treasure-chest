@@ -1,6 +1,5 @@
 <template>
   <div class="treasure-chest-module single-video-container">
-    <!-- <img :src="info.imgSrc" :alt="info.imgAlt" draggable="false" /> -->
     <video autoplay loop :poster="info.videoPoster" width="500">
       <source :src="info.videoSrc" type="video/mp4" />
       <p>{{ info.videoAlt }}</p>
@@ -30,7 +29,8 @@ export default class TestA extends Vue {
 
 <style lang="scss" scoped>
 .single-video-container {
-  width: 100%;
+  width: 460px;
+  height: 520px;
   border-radius: 4px;
 
   // 提取为公共属性

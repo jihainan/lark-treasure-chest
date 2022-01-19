@@ -143,13 +143,13 @@ export default class TestCaseHorizontal extends Vue {
       // /* 实现动画的两组类(淡入淡出) */
       &.fade-enter-active {
         opacity: 1;
-        transition: all 1.5s cubic-bezier(1, 0.5, 0.8, 1);
+        transition: all 1s cubic-bezier(1, 0.6, 0.9, 1);
       }
 
       &.fade-leave-active {
         opacity: 0;
         transform: translateX(-533px);
-        transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+        transition: all 0.6s cubic-bezier(1, 0.7, 0.3, 0);
       }
 
       &.fade-enter {
