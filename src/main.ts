@@ -1,6 +1,5 @@
 import "vue-class-component/hooks";
 import Vue from "vue";
-import "@/assets/styles/index.scss";
 
 import App from "@/app.vue";
 

@@ -10,6 +10,7 @@ import CaseListVertical from "./modules/case-list-vertical.vue";
 import CaseListHorizontal from "./modules/case-list-horizontal.vue";
 import VersionUpdate from "./modules/version-update.vue";
 import CollectInfo from "./modules/collect-info.vue";
+import "@/assets/styles/index.scss";
 
 // 内容组件map
 const componentMap = {
