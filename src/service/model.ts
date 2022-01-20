@@ -49,8 +49,44 @@ export interface SingleVideo {
   // 视频封面图片地址
   videoPoster: string;
 }
-
+// 单功能-更新动态
+export interface SingleCase {
+  id?: string;
+  // case标题文字
+  caseTitle: string;
+  // case背景资源地址
+  caseBgSrc: string;
+  // case资源占位文字
+  caseAlt: string;
+  // case功能更新描述文字
+  caseDescribe: string;
+}
+// 多功能-更新动态-竖向
+export interface CaseListVertical {
+  /* case list */
+  caseList?: Array<{
+    id: string;
+    caseTitle: string;
+    caseImgSrc: string;
+    caseImgAlt: string;
+  }>;
+}
+// 多功能-更新动态-横向
+export interface CaseListHorizontal {
+  /* case list */
+  caseList?: Array<{
+    id: string;
+    caseTitle: string;
+    caseImgSrc: string;
+    caseImgAlt: string;
+    caseDescribe: string;
+  }>;
+}
 /** 应用级别的数据类型 */
 export type DataResponse<T> = BaseResponse<DataPayload<T>>;
-export type ContentTypes = SingleImg | SingleVideo;
+export type ContentTypes =
+  | SingleImg
+  | SingleVideo
+  | SingleCase
+  | CaseListVertical;
 export type InfoResponse = DataResponse<ContentTypes>;

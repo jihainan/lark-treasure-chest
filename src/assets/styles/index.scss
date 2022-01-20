@@ -1,15 +1,22 @@
 /* Global scss */
 html,
 body {
-  height: 100%;
   width: 100%;
+  height: 100%;
 }
 
 body {
+  margin: 0;
+
   // font-family: var(--font-family-element);
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+}
+
+ul,li{
+  padding: 0;
   margin: 0;
+  list-style: none;
 }
 
 *,
@@ -20,9 +27,9 @@ body {
 
 
 ::-webkit-scrollbar {
-  background-color: transparent;
-  height: 6px;
   width: 6px;
+  height: 6px;
+  background-color: transparent;
 
   /* or add it to the track */
 }
@@ -43,4 +50,11 @@ body {
     background-color: transparent;
   }
 
+}
+
+.treasure-chest-module {
+  width: 500px;
+  margin: auto;
+  background: #fff;
+  border-radius: 10px;
 }
