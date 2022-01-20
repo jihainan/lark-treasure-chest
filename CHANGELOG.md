@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/jihainan/lark-treasure-chest/compare/v2.0.0...v2.1.0) (2022-01-20)
+
+
+### Features
+
+* **component:** singImg ([df9ad17](https://github.com/jihainan/lark-treasure-chest/commit/df9ad17b46c83ae64e0e0838919c484f548fb919))
+
 ## [2.0.0](https://github.com/jihainan/lark-treasure-chest/compare/v1.4.3...v2.0.0) (2021-12-31)
 
 
