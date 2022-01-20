@@ -25,8 +25,8 @@ export default class TestA extends Vue {
 
 <style lang="scss" scoped>
 .single-img-container {
-  width: 460px;
-  height: 520px;
+  width: 500px;
+  height: 400px;
   border-radius: 4px;
 
   // 提取为公共属性
