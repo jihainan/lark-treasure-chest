@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.2](https://github.com/jihainan/lark-treasure-chest/compare/v2.1.1...v2.1.2) (2022-01-24)
+
+
+### Bug Fixes
+
+* **component:** single-video ([3f0a087](https://github.com/jihainan/lark-treasure-chest/commit/3f0a087d949900406bd89c5775bc57961e6ce94f))
+* **component:** single-video ([858e771](https://github.com/jihainan/lark-treasure-chest/commit/858e771fcedac1a85fddfbd8c5770ba5d797a3e8))
+* **request.ts:** update request timeout ([b6e8171](https://github.com/jihainan/lark-treasure-chest/commit/b6e817157584c029d9afb868b38c80301dc538d6))
+
 ### [2.1.1](https://github.com/jihainan/lark-treasure-chest/compare/v2.1.0...v2.1.1) (2022-01-20)
 
 
