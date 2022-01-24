@@ -33,6 +33,7 @@ export default class TestA extends Vue {
       setTimeout(() => {
         const videoEle = document.querySelector("video");
         if (videoEle) {
+          videoEle.muted = true;
           videoEle.play();
         }
       }, 0);
