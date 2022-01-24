@@ -2,7 +2,7 @@ import axios from "axios";
 
 const service = axios.create({
   baseURL: "/lark/treasure/chest/",
-  timeout: 5000,
+  timeout: 15 * 1000,
 });
 
 // Request interceptors
