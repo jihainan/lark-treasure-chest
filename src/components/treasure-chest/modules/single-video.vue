@@ -1,6 +1,12 @@
 <template>
   <div class="treasure-chest-module single-video-container">
-    <video loop :poster="info.videoPoster" width="500">
+    <video
+      loop
+      :poster="info.videoPoster"
+      width="500"
+      autoplay="true"
+      muted="muted"
+    >
       <source :src="info.videoSrc" type="video/mp4" />
       <p>{{ info.videoAlt }}</p>
     </video>
@@ -9,7 +15,7 @@
 <script lang="ts">
 import Vue from "vue";
 import Component from "vue-class-component";
-import { Prop, Watch } from "vue-property-decorator";
+import { Prop } from "vue-property-decorator";
 import { SingleVideo } from "@/service/model";
 
 @Component
@@ -23,22 +29,6 @@ export default class TestA extends Vue {
     }),
   })
   info!: SingleVideo;
-
-  /**
-   * @param {string} val 视频信息
-   */
-  @Watch("info", { immediate: true, deep: true })
-  videoPlay(val: string) {
-    if (val) {
-      setTimeout(() => {
-        const videoEle = document.querySelector("video");
-        if (videoEle) {
-          videoEle.muted = true;
-          videoEle.play();
-        }
-      }, 0);
-    }
-  }
 }
 </script>
 
