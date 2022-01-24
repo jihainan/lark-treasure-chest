@@ -23,8 +23,11 @@ export default class TestA extends Vue {
     }),
   })
   info!: SingleVideo;
-  @Watch("info", { immediate: true })
-  // eslint-disable-next-line require-jsdoc
+
+  /**
+   * @param {string} val 视频信息
+   */
+  @Watch("info", { immediate: true, deep: true })
   videoPlay(val: string) {
     if (val) {
       setTimeout(() => {
