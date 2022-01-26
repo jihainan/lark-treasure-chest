@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.8](https://github.com/jihainan/lark-treasure-chest/compare/v2.1.7...v2.1.8) (2022-01-26)
+
 ### [2.1.7](https://github.com/jihainan/lark-treasure-chest/compare/v2.1.6...v2.1.7) (2022-01-24)
 
 ### [2.1.6](https://github.com/jihainan/lark-treasure-chest/compare/v2.1.5...v2.1.6) (2022-01-24)
