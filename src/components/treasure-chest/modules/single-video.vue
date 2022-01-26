@@ -35,7 +35,7 @@ export default class TestA extends Vue {
 <style lang="scss" scoped>
 .single-video-container {
   width: 460px;
-  height: 520px;
+  height: 345px;
   border-radius: 4px;
 
   // 提取为公共属性
